@@ -1,0 +1,43 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="container">
+            <!-- End Row -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">View Video</h4>
+                  </div>
+                  <div class="col-12">
+                    <div class="video-container">
+  <div class="iframe-container">
+  <iframe width="560" height="315" [src]="safeSrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  </div>
+  <div class="video-details">
+    <div class="video-name">
+      <h2>
+        {{video?.title}}
+      </h2>
+    </div>
+  <div class="views">
+          <p>
+              12,000 views
+          </p>
+          </div>
+<div class="v-desc">
+<p>
+  {{video?.desc}}
+</p>
+</div>
+
+
+</div>
+                  </div>
+              </div>
+            </div>

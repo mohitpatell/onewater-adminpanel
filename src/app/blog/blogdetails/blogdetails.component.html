@@ -1,0 +1,105 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-col-md-3"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-col-md-3 active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+
+            <!-- End Row -->
+          <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">Blog Details</h4>
+            </div>
+            </div>
+            <div class="container">
+            <div class="detail-section">
+              <div class="detail">
+            <div class="row">
+              <div class="col-lg-2">
+                <h6>Title</h6>
+              </div>
+              <div class="col-lg-10">
+                <p>
+                  {{blog?.title}}
+                </p>
+              </div>
+            </div>
+            </div>
+            <div class="detail">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-4">
+                  <h6>Author</h6>
+                </div>
+                <div class="col-lg-8">
+                  <h6>
+                  <a href="#">{{author?.name}}</a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          <div class="col-lg-6"   *ngIf="blog?.approved_id=='null';">
+            <div class="row">
+              <div class="col-lg-4">
+                <h6>Status</h6>
+              </div>
+              <div class="col-lg-8">
+                <p class="status-btn" style="background-color:#ff988e;color:#bd0303">Pending</p>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+          <div class="detail">
+        <div class="row">
+          <div class="col-lg-2">
+            <h6>Content</h6>
+          </div>
+          <div [innerHTML]="blog?.desc" class="col-lg-10">
+
+          </div>
+        </div>
+        </div>
+        <div class="detail">
+        </div>
+<div class="detail"  *ngIf="blog?.approved_id=='null';">
+          <div class="row">
+            <div class="col-lg-2">
+              <h6>Select Category</h6>
+            </div>
+            <div class="col-lg-10">
+
+                <div class="basic-form">
+                                    <form>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select>
+                                        </div>
+                                    </form>
+              </div>
+              </div>
+            </div>
+          </div>
+<!-- *ngIf="blog?.approved_id!='null'; else other_content" -->
+          <div class="row">
+            <div class="col-12 text-center" *ngIf="blog?.approved_id=='null';">
+              <button type="button" class="btn mb-1 btn-primary" (click)="approve(blog.unapproved_id, blog._id)">Approve</button>
+              <button type="button" class="btn mb-1 btn-primary" (click)="reject(blog.unapproved_id, blog._id)">Reject</button>
+            </div>
+            <!-- <ng-template #other_content>
+            <div class="col-12 text-center">
+              <button type="button" class="btn mb-1 btn-primary" (click)="approve(blog._id, blog.main_id)">Approve2</button>
+              <button type="button" class="btn mb-1 btn-primary" (click)="reject(blog._id, blog.main_id)">Reject2</button>
+            </div>
+          </ng-template> -->
+          </div>
+        </div>
+      </div>
+      </div>

@@ -1,0 +1,161 @@
+<div class="row page-titles mx-0">
+        <div class="col p-md-0">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-col-md-3">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
+            <li class="breadcrumb-col-md-3 active">
+              <a href="javascript:void(0)">Home</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- End Row -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="content-head">Company Details</h4>
+          </div>
+        </div>
+        <div class="container">
+          <div class="detail-section">
+            <div class="detail">
+              <div class="row">
+                <div class="col-lg-2">
+                  <h6>Title</h6>
+                </div>
+                <div class="col-lg-10">
+                  <p class="name-title">
+                    {{company.company_name}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Category :</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p>{{company.working_area}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Address :</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p>{{company.location}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Company's email :</h6>
+                    </div>
+                    <div class="col-md-6">
+                     <p>
+                      {{company.email}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Company's Website :</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p><a href="www.digiX.com" target="_blank">{{company.company_website}}</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h6>Company No :</h6>
+                          </div>
+                          <div class="col-md-6">
+                            <p>124646</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <h6>Date Established: {{company.date_establish}}</h6>
+                              </div>
+                              <div class="col-md-6">
+                                <p>Digital Solutions</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            <div class="detail">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <h6>DigiX has posted 46 jobs</h6>
+                  </div>
+                      <div class="col-lg-3">
+                      <div class="action-buttons">
+                              <button type="button" name="button" class="btn view" [routerLink]="['/jobs/single-company-jobs']">
+                              <i class="fa fa-eye"></i>
+                              View All
+                              </button>
+                            </div>
+                    </div>
+
+                  </div>
+                </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-lg-2">
+                  <h6>About Company</h6>
+                </div>
+                <div class="col-lg-10">
+                  <p>
+                  {{company.company_description}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <h6>Social Media Handles</h6>
+                    </div>
+                    <div class="col-lg-10 social-handles">
+                      <ul>
+                        <li>
+                              <i class="icon-social-facebook"></i>
+                              <a href="">Facebook</a>
+                          </li>
+                        <li> <i class="icon-social-linkedin"></i>
+                            <a href="">Linkedin</a>
+                        </li>
+                        <li> <i class="icon-social-twitter"></i>
+                            <a href="">Twitter</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+        </div>
+      </div>

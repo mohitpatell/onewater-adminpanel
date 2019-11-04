@@ -1,0 +1,98 @@
+<div class="row page-titles mx-0">
+        <div class="col p-md-0">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <a href="javascript:void(0)">Home</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- End Row -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="content-head">Mandeep Baghel's Jobs</h4>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="active-member">
+                      <div class="table-responsive">
+                        <table class="table table-xs mb-0">
+                          <thead>
+                            <tr>
+                              <th>Posted by</th>
+
+                              <th>Posted on</th>
+                              <th>Position</th>
+                              <th>Application Deadline</th>
+                              <th>Location</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let job of jobs">
+                                  <td>
+                                    <img
+                                      [src]="job.img"
+                                      class=" rounded-circle mr-3"
+                                      alt=""
+                                    />{{ job.company_name }}
+                                  </td>
+                                  <td>
+                                    <span>{{ job.date_added | date: 'dd/MM/yyyy' }}</span>
+                                  </td>
+                                  <td>
+                                    <span>{{ job.title }}</span>
+                                  </td>
+                                  <td>
+                                    <span>{{ job.deadline | date: 'dd/MM/yyyy'}}</span>
+                                  </td>
+                                  <td>
+                                    <span>{{ job.location }}</span>
+                                  </td>
+
+                                  <td>
+                                    <div class="action-buttons">
+                                      <button
+                                        type="button"
+                                        name="button"
+                                        class="btn view"
+                                        [routerLink]="['/jobs/jobdetails/',job._id]"
+                                      >
+                                        <i class="fa fa-eye"></i>
+                                        View
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bootstrap-pagination">
+                  <nav>
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,27 @@
+.detail{border-bottom: 1px solid #ccc;padding: 1rem 0.5rem;}
+.images .col-md-3{
+  margin: 1rem 0;
+}
+.detail-section{
+  padding: 1rem 2rem 3rem;
+    margin: 2rem auto;
+    border-radius: 25px;
+    box-shadow: 5px 5px 33px -8px #88888854;
+
+    h6{
+      font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    margin-top: 15px;
+    }
+    p{
+      color: #666;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+}
+.status-btn{
+}
+.btn-primary{
+  margin: 1.5rem auto;
+}

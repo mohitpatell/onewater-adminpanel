@@ -1,0 +1,70 @@
+.card-profile{
+  min-height: auto;
+  margin: 1rem 0.5rem;
+  padding: 10px 20px;
+}
+.card-title {
+    font-size: 0.9rem;
+    letter-spacing: -0.25px;
+    margin-bottom: .75rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+.card-text {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #777;
+}
+button{
+  margin: 1rem 2rem;
+}
+
+h6{
+  font-size: 1.6rem;
+    letter-spacing: -0.6px;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+p{
+  font-size: 1rem;
+    line-height: 1.8rem;
+}
+.card-profile__info{
+  margin: 2rem 0;
+
+  li{
+    list-style: none;
+      margin: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ccc;
+  }
+}
+
+.buttons{
+   display: inline-flex;
+   justify-content: flex-end;
+   padding: 2rem 1rem 1rem;
+}
+.authors-blog .card-body{
+  padding: 1rem;
+
+  .status-btn{
+    font-size: 0.9rem;
+    line-height: auto;
+  }
+}
+.see-all{
+  display: inline-block;
+    float: right;
+    margin-top: 3rem;
+    color: #777;
+    font-weight: 600;
+    font-size: 1.1rem;
+
+    i{margin-left: 8px;}
+}
+.blog-heading{
+  display: inline-block;
+}

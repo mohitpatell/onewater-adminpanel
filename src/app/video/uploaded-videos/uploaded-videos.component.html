@@ -1,0 +1,44 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="container">
+            <!-- End Row -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">Uploaded Videos</h4>
+                  </div>
+                  <div class="col-12">
+                    <div class="card" >
+                            <div class="card-body" *ngFor="let video of videos">
+                                <div class="basic-list-group">
+                                    <div class="list-group">
+                                        <div class="list-group-item list-group-item-action flex-column align-items-start" >
+                                          <div class="row" >
+                                            <div class="col-sm-3 p-0 m-0">
+                                              <img src="assets/images/imgs/4.png" alt="" />
+                                            </div>
+                                            <div class="col-sm-9">
+                                              <div class="d-flex w-100 justify-content-between">
+                                                  <h5 class="mb-1">{{video.title}} </h5><small>{{video.date_added}}</small>
+                                              </div>
+                                              <p class="mb-1">{{video.desc}}</p><small>495 views</small>
+
+                                              <small class="video-option"> <a [routerLink]="['/video/viewvideo/',video._id]">View</a>  </small>
+                                              <small class="video-option"> <a>Copy Link</a></small>
+                                             </div>
+                                          </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+            </div>

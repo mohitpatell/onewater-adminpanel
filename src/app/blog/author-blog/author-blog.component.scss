@@ -1,0 +1,40 @@
+@media screen and (min-width:1200px){
+  .masonry-item{
+    width: 25%;
+  }
+}
+@media screen and (max-width:1200px){
+  .masonry-item{
+    width: 33.3%;
+  }
+}
+@media screen and (max-width:768px){
+  .masonry-item{
+    width: 50%;
+  }
+}
+@media screen and (max-width:420px){
+  .masonry-item{
+    width: 100%;
+  }
+}
+
+.card{
+  margin:1rem;
+}
+.card-title {
+    font-size: 0.9rem;
+    letter-spacing: -0.25px;
+    margin-bottom: .75rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+.card-body{
+  padding: 1rem;
+}
+.card-text {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #777;
+}

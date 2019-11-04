@@ -1,0 +1,174 @@
+<div class="row page-titles mx-0">
+        <div class="col p-md-0">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-col-md-3">
+              <a href="javascript:void(0)">Dashboard</a>
+            </li>
+            <li class="breadcrumb-col-md-3 active">
+              <a href="javascript:void(0)">Home</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- End Row -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="content-head">Candidate Details</h4>
+          </div>
+        </div>
+        <div class="container">
+          <div class="detail-section">
+            <div class="detail">
+              <div class="row">
+                <div class="col-lg-2">
+                  <h6>Name</h6>
+                </div>
+                <div class="col-lg-10">
+                  <p class="name-title">
+                    {{candidate?.name}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Lives in:</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p>{{candidate?.location}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Email :</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p>{{candidate?.email}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Get Resume :</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <a href={{candidate?.resume}}>Get Resume</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Linkedin Profile</h6>
+                    </div>
+                    <div class="col-md-6">
+                      <p>
+                        <a href="">{{candidate?.linked_In}}</a>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <h6>Mandeep Baghel has applied for {{candidate?.jobs_applied.length}} jobs</h6>
+                  </div>
+                      <div class="col-lg-3">
+                      <div class="action-buttons">
+                              <button type="button" name="button" class="btn view" [routerLink]="['/jobs/single-can-jobs/',candidate._id]">
+                              <i class="fa fa-eye"></i>
+                              View All
+                              </button>
+                            </div>
+                    </div>
+
+                  </div>
+                </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-lg-2">
+                  <h6>About candidate?</h6>
+                </div>
+                <div class="col-lg-10">
+                  <p>
+                    {{candidate?.profile_description}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <h6> Experience</h6>
+                    </div>
+                    <div class="col-lg-10">
+                      <p>{{candidate?.experience}}</p>
+                    </div>
+                  </div>
+                </div>
+            <div class="detail">
+              <div class="row">
+                <div class="col-lg-2">
+                  <h6>Education</h6>
+                </div>
+                <div class="col-lg-10">
+                  <ul>
+                    <li>
+                          <i class="icon-arrow-right"></i>
+                      The applicants should have experience in the following areas
+                    </li>
+                    <li> <i class="icon-arrow-right"></i>
+                      Skills on M.S Word, Excel, and Integrated Accounting package
+                      i.e. Software
+                    </li>
+                    <li>
+                          <i class="icon-arrow-right"></i>Have sound knowledge of commercial activities.</li>
+                    <li> <i class="icon-arrow-right"></i>
+                      Should have vast knowledge in IAS/ IFRS, Company Act, Income
+                      Tax, VAT.
+                    </li>
+                    <li> <i class="icon-arrow-right"></i>Good verbal and written communication skills.</li>
+                    <li> <i class="icon-arrow-right"></i>Leadership, analytical, and problem-solving abilities.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="detail">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <h6>Social Media Profiles</h6>
+                  </div>
+                  <div class="col-lg-10 social-handles">
+                    <ul>
+                      <li>
+                            <i class="icon-social-facebook"></i>
+                            <a href="">Facebook</a>
+                        </li>
+                      <li> <i class="icon-social-linkedin"></i>
+                          <a href="">Linkedin</a>
+                      </li>
+                      <li> <i class="icon-social-twitter"></i>
+                          <a href="">Twitter</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>

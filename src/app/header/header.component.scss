@@ -1,0 +1,38 @@
+.is-active {
+  left: 0; }
+  .is-active .line {
+    background-color: #fff; }
+
+    .is-active {
+      right: 6rem;
+      left: auto; }
+      .is-active .line:nth-child(1) {
+        transform: translateY(0.4rem) rotate(135deg); }
+    .is-active .line:nth-child(2) {
+        transform: translateX(0.4rem); }
+    .is-active .line:nth-child(3) {
+        transform: translateY(-0.4rem) rotate(-135deg); }
+
+.is-active {
+  right: 0; }
+.is-active .line:nth-child(1) {
+    transform: translateY(0.4rem) rotate(-45deg); }
+.is-active .line:nth-child(3) {
+    transform: translateY(-0.4rem) rotate(45deg); }
+
+    .show-dropdown{
+      display: block;
+    }
+    .dropdown-profile{
+      animation : fade 0.35s ease-out;
+    }
+    @keyframes fade{
+      0%{
+        opacity: 0;
+
+      }
+      100%{
+        opacity: 1;
+
+      }
+    }

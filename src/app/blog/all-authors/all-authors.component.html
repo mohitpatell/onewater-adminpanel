@@ -1,0 +1,65 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+
+            <!-- End Row -->
+            <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">All Authors</h4>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="active-member">
+                    <div class="table-responsive">
+                        <table class="table table-xs mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Author Name</th>
+                                    <th>Date Added</th>
+                                    <th>Interests</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let author of allauthors">
+                                    <td><img [src]=author.img class=" rounded-circle mr-3" alt="">{{author.name}}</td>
+                                    <td>
+                                        <span>{{author.date_added | date:'MMMM d, y'}}</span>
+                                    </td>
+                                    <td>
+                                        <span>{{author.interest_category}}</span>
+                                        </td>
+                                    <td>
+                                      <p *ngIf="!author.rejected" class="status-btn" [ngStyle]="{
+                                        'background-color':author.status === 'approved' ? '#8eff96' : '#FFFF33' ,'color':author.status === 'approved' ? '#015a01' : '#333300' }
+                                      ">{{author.status}}</p>
+                                      <p *ngIf="author.rejected" class="status-btn" style="background-color: #ff988e ;color: #bd0303'">{{author.status}}</p>
+                                    </td>
+
+                                    <td>
+                                      <div class="action-buttons">
+                                        <button type="button" name="button" class="btn view"  [routerLink]="['/blog/authordetails/',author._id]">
+                                        <i class="fa fa-eye"></i>
+                                        View
+                                        </button>
+                                      </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+</div>

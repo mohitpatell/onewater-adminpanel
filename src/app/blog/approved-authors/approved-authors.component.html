@@ -1,0 +1,87 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+
+            <!-- End Row -->
+            <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">Approved Authors</h4>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="active-member">
+                    <div class="table-responsive">
+                        <table class="table table-xs mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Author Name</th>
+                                    <th>Address</th>
+                                    <th>Interests</th>
+                                    <th>Date Added</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let author of allauthors">
+                                    <td><img [src]=author.image class=" rounded-circle mr-3" alt="">{{author.name}}</td>
+                                    <td>
+                                        <span>{{author.location}}</span>
+                                    </td>
+                                    <td>
+                                        <span>{{author.interest_category}}</span>
+                                        </td>
+                                    <td>
+                                      <p>{{author.date_added | date:'MMMM d, y'}}</p>
+                                    </td>
+
+                                    <td>
+                                      <div class="action-buttons">
+                                        <button type="button" name="button" class="btn view" [routerLink]="['/blog/authordetails/',author.main_id]">
+                                        <i class="fa fa-eye"></i>
+                                        View
+                                        </button>
+                                      <!--   <button type="button" name="button" class="btn approved" *ngIf="author.status!='approved'">
+                                        <i class="fa fa-check-circle"></i>
+                                        Approved
+                                        </button>
+                                        <button type="button" name="button" class="btn decline">
+                                        <i class="fa fa-times-circle"></i>
+                                        Decline
+                                        </button>-->
+                                      </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bootstrap-pagination">
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+        </div>
+    </div>
+</div>
+</div></div>
+</div>

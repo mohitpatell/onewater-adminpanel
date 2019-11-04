@@ -1,0 +1,12 @@
+<div id="main-wrapper">
+  <app-header *ngIf="showHeader"></app-header>
+  <app-sidebar *ngIf="showHeader"></app-sidebar>
+  <div [class.content-body]="showHeader">
+  <router-outlet></router-outlet>
+  </div>
+   <div class="footer" *ngIf="showHeader">
+          <div class="copyright">
+              <p>Copyright &copy;<a href="https://onewater.herokuapp.com">OneWater</a> 2019</p>
+          </div>
+      </div>
+  </div>

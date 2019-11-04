@@ -1,0 +1,39 @@
+<div class="row page-titles mx-0">
+            <div class="col p-md-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="container-fluid">
+            <!-- End Row -->
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="content-head">Author's Blogs</h4>
+                    <!-- <p class="text-muted">This is 3 column contents</p> -->
+                    <ngx-masonry [useImagesLoaded]="true">
+                         <div ngxMasonryItem class="masonry-item" *ngFor="let blog of allblogs">
+                            <div class="card">
+                                <img class="img-fluid" [src]=blog.img alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{blog.title}}</h5>
+                                    <p class="card-text">{{blog.author}}</p>
+                                    <!-- <p class="status-btn" [ngStyle]="{
+                                      'background-color':blog.status === 'approved' ? '#8eff96' : '#ff988e' ,'color':blog.status === 'approved' ? '#015a01' : '#bd0303' }
+                                    ">{{blog.status}}</p> -->
+                                </div>
+                                <div class="card-footer">
+                                    <p class="card-text d-inline"><small class="text-muted">{{blog.date}}</small>
+                                    </p><a [routerLink]="['/blog/blogdetails']" class="card-link float-right"><small>View</small></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Col -->
+                      </ngx-masonry>
+                </div>
+            </div>
+
+        </div>
+        <!-- #/ container -->
