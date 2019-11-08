@@ -10,22 +10,50 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class ViewVideoComponent implements OnInit {
 
   public video;
+  public videoid;
   safeSrc: SafeResourceUrl;
-  constructor(public route: ActivatedRoute, public common:CommonService, private sanitizer: DomSanitizer) {
-
-  }
+  constructor(public route: ActivatedRoute, public common:CommonService, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.route.params.subscribe(result=> {
       console.log(result);
+      this.videoid=result.id;
       this.common.getsinglevideos(result.id)
+
       .subscribe(result=> {
         console.log(result);
         this.video=result.result;
+        const link=this.getId(this.video.video_link);
+        this.video.video_link=`https://www.youtube.com/embed/${link}`;
         this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl(this.video.video_link);
         console.log(this.video)
+        this.getlikes(link);
       })
     })
   }
+
+  getlikes(id){
+    this.common.getLikes(id)
+    .subscribe(result=>{
+      console.log(result.items[0].statistics,'result displayed');
+      const data={
+        id:this.videoid,
+        likeCount:result.items[0].statistics.likeCount,
+        viewCount:result.items[0].statistics.viewCount,
+      }
+      this.common.updatelikes(data);
+    })
+  }
+
+   getId(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return match[2];
+    } else {
+        return 'error';
+    }
+}
 
 }

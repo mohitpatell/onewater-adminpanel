@@ -25,9 +25,9 @@
                                             </div>
                                             <div class="col-sm-9">
                                               <div class="d-flex w-100 justify-content-between">
-                                                  <h5 class="mb-1">{{video.title}} </h5><small>{{video.date_added}}</small>
+                                                  <h5 class="mb-1">{{video.title}} </h5><small>{{video.date_added | date:'MMMM d,y'}}</small>
                                               </div>
-                                              <p class="mb-1">{{video.desc}}</p><small>495 views</small>
+                                              <p class="mb-1">{{video.desc}}</p><small>{{video.views}} views</small>
 
                                               <small class="video-option"> <a [routerLink]="['/video/viewvideo/',video._id]">View</a>  </small>
                                               <small class="video-option"> <a>Copy Link</a></small>
