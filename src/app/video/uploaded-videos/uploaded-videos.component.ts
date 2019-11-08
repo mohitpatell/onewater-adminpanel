@@ -16,7 +16,22 @@ export class UploadedVideosComponent implements OnInit {
     .subscribe(result=> {
       console.log(result);
       this.videos=result.result;
+      for(let i=0; i<this.videos.length; i++)
+      {
+        let image=this.getId(this.videos[i].video_link);
+        this.videos[i].image=`https://img.youtube.com/vi/${image}/0.jpg`;
+      }
     })
   }
 
+  getId(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+
+    if (match && match[2].length == 11) {
+        return match[2];
+    } else {
+        return 'error';
+    }
+  }
 }
